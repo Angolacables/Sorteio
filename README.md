@@ -25,7 +25,7 @@ Sorteio Ac é uma plataforma robusta e confiável para realizar sorteios. Com el
    	  ```python
     	 DATABASES = {
      	    'default': {
-       	    'ENGINE': 'django.db.backends.mysql',  
+       	    'ENGINE': 'django.db.backends.mysql',   
          	    'NAME': 'seu_banco_de_dados',
            	    'USER': 'seu_usuario',
             	    'PASSWORD': 'sua_senha',
