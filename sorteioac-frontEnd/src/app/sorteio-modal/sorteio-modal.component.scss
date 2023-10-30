@@ -1,0 +1,17 @@
+.dialog-container {
+    padding: 20px;
+    max-width: 400px;
+  }
+  .value-display {
+    background-color: #15803d;; // setting background color to green
+    color: white; // setting text color to white for better contrast
+    padding: 10px; // adding some padding around the text
+    border-radius: 5px; // optional, for rounded corners
+    text-align: center; // centering the text horizontally
+  }
+  .close-button {
+    position: absolute;
+    top: 10px; // Adjust as needed
+    right: 10px; // Adjust as needed
+    color: #333; // Adjust the color as needed
+  }

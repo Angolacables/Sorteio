@@ -1,0 +1,29 @@
+<div class="congratulations-container">
+    <div class="header">
+        <img class="mx-auto h-16 w-auto" src="assets/logo.png" alt="Logo-AngolaCables">
+
+    </div>
+    <button [disabled]="loading" (click)="ObterVencedor()">
+
+      <span *ngIf="!loading">Girar roleta</span>
+
+      <span *ngIf="loading">Loading...</span>
+
+    </button>
+
+
+
+    <div *ngIf="vencedor">
+
+      <h1>O vencedor do grande Sorteio é: AC-BR{{ value}}</h1>
+        <h2> {{nome}}</h2>
+
+        <p> {{phone}}</p>
+
+        <p>{{email}} </p>
+
+      <p>Parabéns você venceu o prémio</p>
+
+    </div>
+
+  </div>

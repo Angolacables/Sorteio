@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="header">
+      <img class="mx-auto h-16 w-auto" src="assets/logo.png" alt="Logo-telcables">
+    <h1>Seja Bem-vindo ao Sorteio Angola Cables</h1>
+  <p>Preencha os teus dados e gera o teu codigo da sorte.</p>
+  </div>
+  <div class="form-container">
+      <form [formGroup]="form">
+        <mat-form-field appearance="fill">
+          <mat-label>Nome completo</mat-label>
+          <input matInput formControlName="name" placeholder="Name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Email" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Empresa</mat-label>
+          <input matInput formControlName="company" placeholder="Company" />
+        </mat-form-field>
+        <div class="fromPhone">
+          <mat-form-field class="country">
+            <input matInput
+                   placeholder="Country"
+                   [matAutocomplete]="auto"
+                   [formControl]="selectedCountryControl"
+                   [value]="selectedCountry">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onCountrySelected($event)">
+              <mat-option *ngFor="let country of filteredCountries | async" [value]="country.dial_code">
+                {{ country.name }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="phone">
+            <mat-label>Telefone</mat-label>
+            <input matInput formControlName="phone" placeholder="Insira o número com o indicativo" />
+          </mat-form-field>
+        </div>
+
+        <!-- <mat-form-field>
+          <input matInput
+                 placeholder="Country"
+                 [matAutocomplete]="auto"
+                 [formControl]="selectedCountryControl"
+                 [(ngModel)]="selectedCountry">
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onCountrySelected($event)">
+            <mat-option *ngFor="let country of filteredCountries | async" [value]="country.dial_code">
+              {{ country.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field> -->
+
+
+
+
+
+      </form>
+  </div>
+  <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="onSubmit()">Gerar Código da Sorte</button>
+
+  <h2>O Sorteio será realizado as 16H30.</h2>
+</div>

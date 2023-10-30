@@ -1,0 +1,62 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #172554; //
+    color: white;
+}
+
+.congratulations-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+
+    .header {
+        text-align: center;
+
+        img {
+            width: 250px;
+        }
+
+    }
+
+    button {
+        display: flex;
+
+        position: relative;
+        background-color: #15803d;
+        padding-top: 1rem;
+
+        padding-bottom: 1rem;
+
+        padding-left: 1.5rem;
+
+        padding-right: 1.5rem;
+
+        justify-content: center;
+
+        border-radius: 0.375rem;
+
+        border-width: 1px;
+
+        border-color: transparent;
+
+        width: 100%;
+
+        font-size: 18px;
+
+        line-height: 1.25rem;
+
+        font-weight: 500;
+
+        color: #ffffff;
+        &:hover{
+          cursor: pointer;
+        }
+    }
+
+
+}
